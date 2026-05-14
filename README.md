@@ -8,22 +8,24 @@ Double‑click **`index.html`** or **`iron-lady-app.html`** in the same folder a
 
 ## GitHub Pages
 
-### If you see “There isn’t a GitHub Pages site here” (404)
+### If you see 404 (“There isn’t a GitHub Pages site here”)
 
-That almost always means **Pages is not enabled yet** or you opened the **wrong URL**.
+**A. Use GitHub Actions (recommended for this repo)** — a workflow is in **`.github/workflows/pages.yml`**.
 
-1. **Push `main` to GitHub** (repo must contain `index.html` on `main`).  
-2. On GitHub: repo **`IronLadyTech/demo`** → **Settings** → **Pages** (left sidebar).  
-3. Under **Build and deployment** → **Source**: choose **Deploy from a branch**.  
-4. **Branch**: `main`, **Folder**: **`/ (root)`** → **Save**.  
-5. Wait **1–3 minutes**, then open (project site — **must include `/demo/`**):
+1. Push **`main`** (includes that workflow).
+2. GitHub → **`IronLadyTech/demo`** → **Actions** → open **“Deploy to GitHub Pages”** → confirm it **ran successfully** (green). If the org blocks workflows, allow them under org **Settings → Actions**.
+3. **Settings** → **Pages** → **Build and deployment** → **Source**: choose **GitHub Actions** (not “Deploy from a branch” if you use this workflow).
+4. Wait until the workflow finishes, then open:
 
    - **https://ironladytech.github.io/demo/**  
-   - or direct: **https://ironladytech.github.io/demo/iron-lady-app.html**
+   - or **https://ironladytech.github.io/demo/iron-lady-app.html**
 
-Do **not** use only `https://ironladytech.github.io/` unless you have a separate **username.github.io** repository; that is a different site.
+**B. Classic “Deploy from branch”** (no Actions)
 
-If **Source** only shows **GitHub Actions**, pick that and use a Pages workflow, or ask GitHub to show “Deploy from a branch” for this repo.
+1. **Settings** → **Pages** → **Source**: **Deploy from a branch** → **`main`** / **`/ (root)`** → Save.  
+2. Wait 1–3 minutes, then use the same URLs as above.
+
+**Wrong URL:** `https://ironladytech.github.io/` alone is **not** this project site — you need **`/demo/`** in the path.
 
 ### Files that help Pages
 
