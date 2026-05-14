@@ -13,15 +13,15 @@ Double‑click **`index.html`** or **`iron-lady-app.html`** in the same folder a
 That almost always means **Pages is not enabled yet** or you opened the **wrong URL**.
 
 1. **Push `main` to GitHub** (repo must contain `index.html` on `main`).  
-2. On GitHub: repo **`Yas123wanth/demo`** → **Settings** → **Pages** (left sidebar).  
+2. On GitHub: repo **`IronLadyTech/demo`** → **Settings** → **Pages** (left sidebar).  
 3. Under **Build and deployment** → **Source**: choose **Deploy from a branch**.  
 4. **Branch**: `main`, **Folder**: **`/ (root)`** → **Save**.  
 5. Wait **1–3 minutes**, then open (project site — **must include `/demo/`**):
 
-   - **https://yas123wanth.github.io/demo/**  
-   - or direct: **https://yas123wanth.github.io/demo/iron-lady-app.html**
+   - **https://ironladytech.github.io/demo/**  
+   - or direct: **https://ironladytech.github.io/demo/iron-lady-app.html**
 
-Do **not** use only `https://yas123wanth.github.io/` unless you have a separate **username.github.io** repository; that is a different site.
+Do **not** use only `https://ironladytech.github.io/` unless you have a separate **username.github.io** repository; that is a different site.
 
 If **Source** only shows **GitHub Actions**, pick that and use a Pages workflow, or ask GitHub to show “Deploy from a branch” for this repo.
 
