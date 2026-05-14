@@ -6,19 +6,30 @@ Iron Lady app prototype.
 
 Double‑click **`index.html`** or **`iron-lady-app.html`** in the same folder as **`ironlady/logo.png`** (if you use the logo).
 
-## GitHub Pages — avoid “Page not found”
+## GitHub Pages
 
-GitHub serves the site root as **`index.html`**. This repo includes **`index.html`**, which sends visitors to **`iron-lady-app.html`**.
+### If you see “There isn’t a GitHub Pages site here” (404)
 
-Use the **full** project URL (replace `USER` and `REPO`):
+That almost always means **Pages is not enabled yet** or you opened the **wrong URL**.
 
-- **Project site:** `https://USER.github.io/REPO/`  
-  (trailing slash is fine; do **not** omit the repo name for a project Pages site.)
+1. **Push `main` to GitHub** (repo must contain `index.html` on `main`).  
+2. On GitHub: repo **`Yas123wanth/demo`** → **Settings** → **Pages** (left sidebar).  
+3. Under **Build and deployment** → **Source**: choose **Deploy from a branch**.  
+4. **Branch**: `main`, **Folder**: **`/ (root)`** → **Save**.  
+5. Wait **1–3 minutes**, then open (project site — **must include `/demo/`**):
 
-If Pages is set to publish from **`/docs`** instead of root, either switch **Settings → Pages → Branch: main, folder: / (root)** or add the same `index.html` redirect inside **`docs/`**.
+   - **https://yas123wanth.github.io/demo/**  
+   - or direct: **https://yas123wanth.github.io/demo/iron-lady-app.html**
 
-After changing Pages settings, wait **1–2 minutes** and hard‑refresh (`Ctrl+F5`).
+Do **not** use only `https://yas123wanth.github.io/` unless you have a separate **username.github.io** repository; that is a different site.
 
-## Direct link to the app file
+If **Source** only shows **GitHub Actions**, pick that and use a Pages workflow, or ask GitHub to show “Deploy from a branch” for this repo.
 
-`https://USER.github.io/REPO/iron-lady-app.html`
+### Files that help Pages
+
+- **`index.html`** — root URL loads this, then opens **`iron-lady-app.html`**.  
+- **`.nojekyll`** — tells GitHub not to run Jekyll (avoids odd 404s on static files).
+
+### Private repo
+
+GitHub Pages for **private** repos needs a **paid** plan. Use a **public** repo for a free demo, or use Netlify / Cloudflare instead.
